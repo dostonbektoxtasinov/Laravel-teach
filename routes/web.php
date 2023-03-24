@@ -19,10 +19,10 @@ Route::get('/', [PageController::class, 'main'])->name('main');
 Route::get('/About', [PageController::class, 'about'])->name('about');
 Route::get('/Services', [PageController::class, 'services'])->name('services');
 Route::get('/Project', [PageController::class, 'project'])->name('project');
-Route::get('/Blog', [PageController::class, 'blog'])->name('blog');
+// Route::get('/posts.inde', [PageController::class, 'blog'])->name('blog');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 
 
-Route::get('posts', [PostController::class, 'index']);
-// Route::resource('posts', PostController::class); 
+Route::get('posts.index', [PostController::class, 'index']);
+Route::resource('posts', PostController::class); 
