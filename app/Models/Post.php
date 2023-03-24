@@ -9,7 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $table = "bri2";
+    protected $table = "laravel";
 
     protected $fillable = [
         'title',
