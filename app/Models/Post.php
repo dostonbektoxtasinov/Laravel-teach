@@ -9,12 +9,14 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $table = "laravel";
+    // protected $table = "laravel";
 
-    protected $fillable = [
+   protected $fillable =[
         'title',
         'short_content',
         'content',
-        'photo'
-    ];
+        'photo',
+   ];
+
+    
 }

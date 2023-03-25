@@ -14,6 +14,32 @@ class PostController extends Controller
     {
         $posts = Post::all();
         return view('posts.index')->with('posts', $posts);
+
+
+        /* 
+            unfillable in Post model 
+        */
+        // $newpost = new Post;  
+        //    $newpost->title ='123';
+        //     $newpost->short_content = '123';
+        //     $newpost->content = '123';
+        //     $newpost->phoFto = 'save.photo.png';
+        //     $newpost->save();
+        //     return "success";
+
+
+        /*
+            with fillable in Post model 
+         */
+        // $posts = Post::create([
+        //     'title' => 'London to Paris',
+        //     'short_content' => 'London',
+        //     'content' => 'Paris',
+        //     'photo' => 'photo.png'
+        // ]);
+        // $posts->save();
+        // return "success";
+
     }
 
     /**
