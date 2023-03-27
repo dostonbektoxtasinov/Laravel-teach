@@ -26,7 +26,7 @@
                     @foreach ($posts as $post)
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="position-relative mb-4">
-                                <img class="img-fluid rounded w-100" src="{{ $post->photo}}" alt="">
+                                <img class="img-fluid rounded w-100" src="/img/blog-1.jpg" alt="">
                                 <div class="blog-date">
                                     <h4 class="font-weight-bold mb-n1">01</h4>
                                     <small class="text-white text-uppercase">Jan</small>
@@ -39,7 +39,7 @@
                             </div>
                             <h5 class="font-weight-medium mb-2">{{ $post->title }}</h5>
                             <p class="mb-4">{{ $post->short_content }}</p>
-                            <a class="btn btn-sm btn-primary py-2" href="">Read More</a>
+                            <a class="btn btn-sm btn-primary py-2" href="{{ route('posts.show', ['post' => $post->id]) }}">O'qish</a>  {{--show page ga har birini oz id bn chiqarib beradi--}}
                         </div>
                     @endforeach
                     <div class="col-12">

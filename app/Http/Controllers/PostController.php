@@ -16,6 +16,7 @@ class PostController extends Controller
         return view('posts.index')->with('posts', $posts);
 
 
+
         /* 
             unfillable in Post model 
         */
@@ -61,9 +62,21 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Post $post)
     {
-        //
+        // 1 - usul
+        // return view('posts.show', [$post]);
+        // 2 - usul
+        return view('posts.show')->with([
+            'post' => $post,
+            'recent_posts' => Post::latest()->get()->except($post->id)->take(5)
+
+            /* Post.php papkasidan 
+            * latest() - oxirgilaridan olib kelsin
+            * take(5) tasini olib kelsin
+            * except($post->id) - korilayotgan malumot id si dan tawqari kelsin 
+            */
+        ]);
     }
 
     /**

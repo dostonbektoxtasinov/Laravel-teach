@@ -23,5 +23,5 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 
 
-Route::get('posts', [PostController::class, 'index']);
-Route::resource('posts', PostController::class); 
+// Route::get('posts', [PostController::class, 'index']);
+Route::resource('posts', PostController::class,); 
